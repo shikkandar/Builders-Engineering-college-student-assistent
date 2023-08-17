@@ -1,0 +1,131 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #37306B;
+}
+.container{
+  background-color: #66347F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  padding: 20px ;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#gpa-wrap select{
+  width: 180px;
+  height: 30px;
+  background:#9E4784; 
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 5px 5px 10px #D27685,
+                    15px 15px 60px #9E4784 ;
+  border: transparent;
+  outline: transparent;
+  text-align: center;
+}
+#gpa-wrap table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 20px;
+ 
+}
+#gpa-wrap table tr:nth-child(odd) { 
+  background:#9E4784; 
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 5px 5px 10px #D27685,
+                    10px 10px 60px;
+
+}
+#gpa-wrap table tr:nth-child(even) { 
+  background: #9E4784; 
+  color: white;
+  cursor: pointer;
+ 
+}
+#gpa-wrap table tr td { 
+  padding:5px 30px 10px ; 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  
+}
+#gpa-total,.gpa{
+  display: none;
+}
+.shik{
+  --border-size: 3px;
+  --border-angle: 0turn;
+  width: 200px;
+  height: 50px;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  left: ;
+  animation: bg-spin 3s linear infinite;
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+&:hover {
+  animation-play-state: paused;
+}
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.shik1{
+  color: white;
+  position: relative;
+  top: 15px; 
+  text-align: center;
+}
+.b{
+  color:white;
+}
+.w{
+  color: white;
+}
+@media all and (max-width: 800px) {
+  body{
+    background-color: lightblue;
+  }
+  .container{
+    background-color: #f03;
+    width: 90%;
+
+  }
+}
+
